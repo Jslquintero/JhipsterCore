@@ -1,0 +1,44 @@
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Mvc;
+using JhipsterCore.Infrastructure.Configuration;
+using Microsoft.Extensions.Options;
+
+namespace JhipsterCore.Controllers;
+
+[Route("")]
+[ApiController]
+public class AuthController : ControllerBase
+{
+    private readonly SecuritySettings _settings;
+
+    public AuthController(IOptions<SecuritySettings> settings)
+    {
+        _settings = settings.Value;
+    }
+
+    [HttpGet("oauth2/authorization/oidc")]
+    public async Task LogIn()
+    {
+        await HttpContext.ChallengeAsync(new AuthenticationProperties { RedirectUri = "/" });
+    }
+
+    [HttpPost("login/oauth2/code/oidc")]
+    public IActionResult CallBack()
+    {
+        return Redirect("/");
+    }
+
+    [HttpPost("api/logout")]
+    public async Task<IActionResult> LogOut()
+    {
+        await HttpContext.SignOutAsync();
+        return Ok(new
+        {
+            logoutUrl = _settings.Authentication.OAuth2.Provider.LogOutUri,
+            idToken = await HttpContext.GetTokenAsync("id_token")
+        });
+    }
+}

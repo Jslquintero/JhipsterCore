@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig",
+  "include": ["src/app", "src/microfrontend"],
+  "compilerOptions": {
+    "paths": {
+      "app/*": ["src/app/*"]
+    },
+    "types": ["jest", "webpack-env"]
+  }
+}

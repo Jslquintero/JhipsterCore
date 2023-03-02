@@ -1,0 +1,56 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "authenticationType": "oauth2",
+    "baseName": "JhipsterCore",
+    "blueprints": [
+      {
+        "name": "generator-jhipster-dotnetcore",
+        "version": "3.9.1"
+      }
+    ],
+    "buildTool": "maven",
+    "cacheProvider": "ehcache",
+    "clientFramework": "react",
+    "clientPackageManager": "npm",
+    "clientTheme": "darkly",
+    "clientThemeVariant": "dark",
+    "cqrsEnabled": false,
+    "creationTimestamp": 1677784544599,
+    "databaseType": "postgres",
+    "devDatabaseType": "h2Disk",
+    "devServerPort": 9060,
+    "dtoSuffix": "DTO",
+    "enableGradleEnterprise": false,
+    "enableHibernateCache": true,
+    "enableTranslation": true,
+    "entitySuffix": "",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "7.8.1",
+    "languages": ["es"],
+    "namespace": "JhipsterCore",
+    "nativeLanguage": "es",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-dotnetcore",
+        "version": "3.9.1"
+      }
+    ],
+    "packageName": "com.mycompany.myapp",
+    "pages": [],
+    "prodDatabaseType": "mysql",
+    "reactive": false,
+    "searchEngine": false,
+    "serverPort": "5000",
+    "serviceDiscoveryType": false,
+    "skipCheckLengthOfIdentifier": false,
+    "skipFakeData": false,
+    "skipUserManagement": false,
+    "testFrameworks": [],
+    "websocket": false,
+    "withAdminUi": true
+  },
+  "generator-jhipster-dotnetcore": {
+    "ciType": "Github"
+  }
+}

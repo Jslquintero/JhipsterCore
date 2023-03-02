@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>JhipsterCore.Domain</RootNamespace>
+        <OutputType>Library</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Identity" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+        <PackageReference Include="Newtonsoft.Json" />
+        <PackageReference Include="JHipsterNet.Core" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\JhipsterCore.Crosscutting\JhipsterCore.Crosscutting.csproj" />
+    </ItemGroup>
+
+</Project>

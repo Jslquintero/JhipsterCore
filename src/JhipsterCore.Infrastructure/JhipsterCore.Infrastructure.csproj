@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>JhipsterCore.Infrastructure</RootNamespace>
+        <OutputType>Library</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+        <PackageReference Include="Serilog" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\JhipsterCore.Domain\JhipsterCore.Domain.csproj" />
+        <ProjectReference Include="..\JhipsterCore.Dto\JhipsterCore.Dto.csproj" />
+        <ProjectReference Include="..\JhipsterCore.Crosscutting\JhipsterCore.Crosscutting.csproj" />
+    </ItemGroup>
+
+</Project>
